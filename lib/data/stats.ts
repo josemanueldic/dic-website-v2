@@ -1,3 +1,6 @@
+// Headline company stats. To add, edit or remove a stat, edit the `stats`
+// array below — see docs/CONTENT_GUIDE.md.
+
 export type Stat = {
   label: string;
   value: string;

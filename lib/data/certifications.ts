@@ -1,3 +1,8 @@
+// Certifications and badges shown on the site. To add, edit or remove one,
+// edit the `certifications` array below — see docs/CONTENT_GUIDE.md.
+// Set `expiry` on any certificate that lapses; past-expiry badges are
+// hidden automatically by getActiveCertifications() below.
+
 export type Certification = {
   slug: string;
   name: string;

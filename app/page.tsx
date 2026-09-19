@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { ProjectsFeatured } from "@/components/sections/ProjectsFeatured";
-import { FeatureCards } from "@/components/sections/FeatureCards";
+import { WhyDicCards } from "@/components/sections/FeatureCards";
 import { ClientsLogos } from "@/components/sections/ClientsLogos";
 import { Certifications } from "@/components/sections/Certifications";
 import { CtaBanner } from "@/components/sections/CtaBanner";
@@ -17,7 +17,7 @@ export default function Home() {
       <StatsStrip />
       <ServiceGrid />
       <ProjectsFeatured />
-      <FeatureCards />
+      <WhyDicCards />
       <ClientsLogos />
       <Certifications />
       <CtaBanner />

@@ -1,3 +1,6 @@
+// Clients shown on the site. To add, edit or remove a client, edit the
+// `clients` array below — see docs/CONTENT_GUIDE.md.
+
 export type Client = {
   slug: string;
   name: string;
