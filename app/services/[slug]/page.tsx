@@ -51,24 +51,26 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <main>
-      <HeroPage title={service.name} intro={service.summary} />
-      <RichText heading="Overview" body={service.intro} />
+      <HeroPage eyebrow="Service" title={service.name} intro={service.summary} />
+      <RichText eyebrow="Overview" heading="How We Deliver It" body={service.intro} />
       <ServiceDetailList capabilities={service.capabilities} />
       <CapabilityMatrix materials={service.materials ?? []} />
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {Array.from({ length: 6 }, (_, index) => (
-              <PhotoSlot
-                key={index}
-                slot={`service/${service.slug}/gallery/${index + 1}`}
-                ratio="3/2"
-              />
+              <div key={index} className="overflow-hidden rounded-xl">
+                <PhotoSlot
+                  slot={`service/${service.slug}/gallery/${index + 1}`}
+                  ratio="3/2"
+                  className="rounded-none"
+                />
+              </div>
             ))}
           </div>
         </div>
       </section>
-      <ProjectsGrid heading={`${service.name} Projects`} projects={relatedProjects} />
+      <ProjectsGrid eyebrow="Portfolio" heading={`${service.name} Projects`} projects={relatedProjects} />
       <Faq items={faqItems} />
       <CtaBanner />
     </main>

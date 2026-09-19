@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <HeroPage title="Contact Us" intro="Get in touch for quotes, tenders and general enquiries." />
+      <HeroPage
+        eyebrow="Get In Touch"
+        title="Contact Us"
+        intro="Get in touch for quotes, tenders and general enquiries."
+      />
       <ContactForm />
       <ContactDetails />
     </main>

@@ -1,5 +1,6 @@
 import type { ProjectPhoto } from "@/lib/data/projects";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 type GalleryFullProps = {
   projectSlug: string;
@@ -15,13 +16,21 @@ export function GalleryFull({ projectSlug, photos }: GalleryFullProps) {
 
   return (
     <section className="bg-muted">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <h2 className="text-2xl font-bold text-primary">Gallery</h2>
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeading eyebrow="Full Record" title="Gallery" />
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {photos.map((photo) => (
             <div key={photo.slot}>
-              <PhotoSlot slot={`project/${projectSlug}/gallery/${photo.slot}`} ratio="4/3" />
-              <p className="mt-1 text-xs text-muted-foreground">{photo.phase}</p>
+              <div className="overflow-hidden rounded-xl">
+                <PhotoSlot
+                  slot={`project/${projectSlug}/gallery/${photo.slot}`}
+                  ratio="4/3"
+                  className="rounded-none"
+                />
+              </div>
+              <p className="mt-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                {photo.phase}
+              </p>
             </div>
           ))}
         </div>

@@ -1,9 +1,12 @@
+import { SectionHeading } from "@/components/ui/SectionHeading";
+
 export type FeatureCard = {
   title: string;
   text: string;
 };
 
 type FeatureCardsProps = {
+  eyebrow?: string;
   heading: string;
   items: FeatureCard[];
 };
@@ -26,15 +29,18 @@ const whyDicReasons: FeatureCard[] = [
 // feature.cards, 3-column variant (spec section 4). Reused across pages
 // with different headings and content — e.g. "Why DIC" on Home, or
 // quality/HSE/training on the Quality, HSE & Sustainability page.
-export function FeatureCards({ heading, items }: FeatureCardsProps) {
+export function FeatureCards({ eyebrow, heading, items }: FeatureCardsProps) {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <h2 className="text-2xl font-bold text-primary">{heading}</h2>
-        <div className="mt-8 grid gap-8 sm:grid-cols-3">
-          {items.map((item) => (
-            <div key={item.title}>
-              <h3 className="font-semibold text-primary">{item.title}</h3>
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeading eyebrow={eyebrow} title={heading} />
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          {items.map((item, index) => (
+            <div key={item.title} className="rounded-2xl border border-border p-6">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/5 text-sm font-bold text-primary">
+                {index + 1}
+              </span>
+              <h3 className="mt-4 font-semibold text-primary">{item.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
             </div>
           ))}
@@ -46,5 +52,5 @@ export function FeatureCards({ heading, items }: FeatureCardsProps) {
 
 // why.dic — the "why DIC" instance used on Home and the Services overview (spec section 5).
 export function WhyDicCards() {
-  return <FeatureCards heading="Why DIC" items={whyDicReasons} />;
+  return <FeatureCards eyebrow="Why DIC" heading="Built for Results" items={whyDicReasons} />;
 }

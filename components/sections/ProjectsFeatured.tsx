@@ -3,5 +3,7 @@ import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 
 // projects.featured, 3-up grid variant (spec section 4).
 export function ProjectsFeatured() {
-  return <ProjectsGrid heading="Featured Projects" projects={getFeaturedProjects()} />;
+  return (
+    <ProjectsGrid eyebrow="Our Work" heading="Featured Projects" projects={getFeaturedProjects()} />
+  );
 }

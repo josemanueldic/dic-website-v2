@@ -21,12 +21,16 @@ const benefitsItems = [
 export default function CareersPage() {
   return (
     <main>
-      <HeroPage title="Careers" intro="Build your career with a full-service Qatar-based contractor." />
+      <HeroPage
+        eyebrow="Join Us"
+        title="Careers"
+        intro="Build your career with a full-service Qatar-based contractor."
+      />
       <RichText
         heading="Working at DIC"
         body="We invest in our workforce across engineering, HSE, procurement and site operations, with training and career growth built into every role."
       />
-      <FeatureCards heading="Why Join Us" items={benefitsItems} />
+      <FeatureCards eyebrow="Benefits" heading="Why Join Us" items={benefitsItems} />
       <CareersList />
       <ContactForm />
     </main>

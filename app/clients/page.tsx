@@ -16,7 +16,11 @@ export const metadata: Metadata = {
 export default function ClientsPage() {
   return (
     <main>
-      <HeroPage title="Our Clients" intro="Trusted across government, semi-government and private sectors." />
+      <HeroPage
+        eyebrow="Trusted By"
+        title="Our Clients"
+        intro="Trusted across government, semi-government and private sectors."
+      />
       <ClientsLogos />
       <Recognition items={recognitions} />
       <ProjectsFeatured />

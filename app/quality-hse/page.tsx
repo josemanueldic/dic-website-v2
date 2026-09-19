@@ -41,6 +41,7 @@ export default function QualityHsePage() {
   return (
     <main>
       <HeroPage
+        eyebrow="Our Standards"
         title="Quality, HSE & Sustainability"
         intro="Certified quality, safety and environmental management across every project."
       />
@@ -49,10 +50,10 @@ export default function QualityHsePage() {
         body="Quality, health, safety and environmental management are built into how every project is planned and delivered, backed by ISO-certified management systems."
       />
       <Certifications />
-      <FeatureCards heading="Quality Control & Testing" items={qualityItems} />
-      <FeatureCards heading="Health, Safety & Environment" items={hseItems} />
-      <ProcessSteps heading="Risk Management Process" steps={riskManagementSteps} />
-      <FeatureCards heading="Training" items={trainingItems} />
+      <FeatureCards eyebrow="Quality" heading="Quality Control & Testing" items={qualityItems} />
+      <FeatureCards eyebrow="HSE" heading="Health, Safety & Environment" items={hseItems} />
+      <ProcessSteps eyebrow="Process" heading="Risk Management Process" steps={riskManagementSteps} />
+      <FeatureCards eyebrow="People" heading="Training" items={trainingItems} />
       <CtaBanner />
     </main>
   );

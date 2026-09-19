@@ -17,6 +17,7 @@ export default function ServicesPage() {
   return (
     <main>
       <HeroPage
+        eyebrow="What We Do"
         title="Our Services"
         intro="Full-service capability across underground utilities, building construction and civil maintenance."
       />

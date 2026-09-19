@@ -22,11 +22,13 @@ export default function AboutPage() {
   return (
     <main>
       <HeroPage
+        eyebrow="Company"
         title="About Us"
         intro="A Qatar-based contractor delivering underground utilities, building and civil construction since 2007."
       />
       <RichText
-        heading="Our Story"
+        eyebrow="Our Story"
+        heading="Built on Delivery"
         body="Since 2007, Doha International Co. has grown from a founding team into a full-service contractor across underground utilities, building construction and civil maintenance for government, semi-government and private clients in Qatar."
         imageSlot="page/about/hero"
       />

@@ -17,6 +17,7 @@ export default function ProjectsPage() {
   return (
     <main>
       <HeroPage
+        eyebrow="Our Work"
         title="Projects"
         intro="A selection of the projects delivered across government, semi-government and private sectors."
       />

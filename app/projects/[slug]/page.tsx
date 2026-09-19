@@ -46,11 +46,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <ProjectHeader project={project} />
       <GalleryShowcase projectSlug={project.slug} photos={project.gallery ?? []} />
       {project.narrative ? (
-        <RichText heading="Project Narrative" body={project.narrative} />
+        <RichText eyebrow="The Project" heading="Narrative" body={project.narrative} />
       ) : null}
       <GalleryFull projectSlug={project.slug} photos={project.gallery ?? []} />
       <Recognition items={relatedRecognitions} />
-      <ProjectsGrid heading="Related Projects" projects={getRelatedProjects(project)} />
+      <ProjectsGrid eyebrow="Keep Exploring" heading="Related Projects" projects={getRelatedProjects(project)} />
       <CtaBanner />
     </main>
   );

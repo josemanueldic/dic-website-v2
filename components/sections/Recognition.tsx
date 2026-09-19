@@ -1,4 +1,5 @@
 import type { Recognition as RecognitionItem } from "@/lib/data/recognition";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 type RecognitionProps = {
   items: RecognitionItem[];
@@ -11,11 +12,19 @@ export function Recognition({ items }: RecognitionProps) {
 
   return (
     <section className="bg-muted">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <h2 className="text-2xl font-bold text-primary">Recognition</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeading eyebrow="Appreciation" title="Recognition" />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {items.map((item) => (
-            <div key={item.slug} className="rounded-lg border border-border bg-background p-5">
+            <div
+              key={item.slug}
+              className="flex items-center gap-4 rounded-2xl border border-border bg-background p-6"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                <svg viewBox="0 0 20 20" className="h-5 w-5" fill="currentColor">
+                  <path d="M10 1.5 12.4 6l5 .7-3.6 3.5.9 5-4.7-2.4-4.7 2.4.9-5-3.6-3.5 5-.7Z" />
+                </svg>
+              </span>
               <p className="font-semibold text-primary">{item.title}</p>
             </div>
           ))}
